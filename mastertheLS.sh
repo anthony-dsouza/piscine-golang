@@ -1,2 +1,2 @@
 #! /bin/bash/
-ls -AmtF
+ls -Amtp
