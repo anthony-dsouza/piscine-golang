@@ -7,48 +7,34 @@ func PrintComb() {
 	b := 0
 	c := 0
 
-	z01.PrintRune(rune(a) + 48)
-	z01.PrintRune(rune(b) + 48)
-	z01.PrintRune(rune(c) + 48)
-
-	for c <= 9 {
-
-		if c == 10 {
-			c = 0
-		} else if a == 7 && b == 8 && c == 9 {
+	for a <= 9 {
+		if c == 7 {
 			z01.PrintRune('\n')
-		}
-
-		// comma
-		z01.PrintRune(44)
-		// space
-		z01.PrintRune(32)
-		z01.PrintRune(rune(a) + 48)
-		z01.PrintRune(rune(b) + 48)
-		z01.PrintRune(rune(c) + 48)
-
-		for b <= 8 {
-			b++
-			if b == 8 {
-				b = 0
+			a = 10
+		} else {
+			if a == 9 {
+				if b == 8 && c < 7{
+					c++
+					b = c + 1
+					a = b + 1
+				} else if b < 8{
+					b++
+					a = b + 1
+				}
+			} else {
+				a++
 			}
 			// comma
 			z01.PrintRune(44)
 			// space
 			z01.PrintRune(32)
-			z01.PrintRune(rune(a) + 48)
-			z01.PrintRune(rune(b) + 48)
 			z01.PrintRune(rune(c) + 48)
-			for a <= 7 {
-				a++
-				// comma
-				z01.PrintRune(44)
-				// space
-				z01.PrintRune(32)
-				z01.PrintRune(rune(a) + 48)
-				z01.PrintRune(rune(b) + 48)
-				z01.PrintRune(rune(c) + 48)
-			}
+			z01.PrintRune(rune(b) + 48)
+			z01.PrintRune(rune(a) + 48)
 		}
 	}
+
+
+
+
 }
