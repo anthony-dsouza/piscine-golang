@@ -3,6 +3,9 @@ package main
 import "github.com/01-edu/z01"
 
 func main() {
-	z01.PrintRune('a')
-	z01.PrintRune('\n')
+	var i rune = 97
+	for i <= 122 {
+		z01.PrintRune(i)
+		i++
+	}
 }
