@@ -13,11 +13,11 @@ func PrintComb() {
 			a = 10
 		} else {
 			if a == 9 {
-				if b == 8 && c < 7{
+				if b == 8 && c < 7 {
 					c++
 					b = c + 1
 					a = b + 1
-				} else if b < 8{
+				} else if b < 8 {
 					b++
 					a = b + 1
 				}
@@ -33,8 +33,5 @@ func PrintComb() {
 			z01.PrintRune(rune(a) + 48)
 		}
 	}
-
-
-
 
 }
