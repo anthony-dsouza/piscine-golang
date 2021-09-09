@@ -13,5 +13,4 @@ func PrintStr(s string) {
 		j := rune(a[i])
 		z01.PrintRune(j)
 	}
-	z01.PrintRune('\n')
 }
