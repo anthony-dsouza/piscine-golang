@@ -6,6 +6,6 @@ import (
 )
 
 func main() {
-	l := piscine.StrLen("Hello World!")
-	fmt.Println(l)
+	fmt.Println(piscine.Sqrt(25))
+	fmt.Println(piscine.Sqrt(16))
 }
