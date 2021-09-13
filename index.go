@@ -9,6 +9,9 @@ func Index(s string, toFind string) int {
 	if length <= 0 {
 		return -1
 	}
+	if toFind == "" {
+		return 0
+	}
 
 	for i, v := range s {
 		if v == find[0] {
@@ -20,5 +23,5 @@ func Index(s string, toFind string) int {
 			}
 		}
 	}
-	return 0
+	return -1
 }
