@@ -6,11 +6,12 @@ func Index(s string, toFind string) int {
 	str := []rune(s)
 	s_len := len(str)
 
-	if length <= 0 {
-		return -1
-	}
 	if toFind == "" {
 		return 0
+	}
+
+	if length <= 0 {
+		return -1
 	}
 
 	for i, v := range s {
