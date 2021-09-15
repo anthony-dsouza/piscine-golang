@@ -5,7 +5,7 @@ func MakeRange(min, max int) []int {
 		return make([]int, 0)
 	}
 	int := make([]int, max)
-	slice := int[min:]
+	slice := int[min:max]
 
 	return slice
 }
