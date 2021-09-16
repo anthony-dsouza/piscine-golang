@@ -10,8 +10,11 @@ func SplitWhiteSpaces(s string) []string {
 
 	for i, v := range s {
 		if v == 32 || v == 15 || v == 10 {
-			str = append(str, word)
-			word = ""
+			if aRune[i+1] == 32 || aRune[i+1] == 15 || aRune[i+1] == 10 {
+			} else {
+				str = append(str, word)
+				word = ""
+			}
 		} else if i == l {
 			word = word + string(v)
 			str = append(str, word)
