@@ -39,4 +39,5 @@ func main() {
 			z01.PrintRune(lower[value-1])
 		}
 	}
+	z01.PrintRune('\n')
 }
