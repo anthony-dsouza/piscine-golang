@@ -7,25 +7,23 @@ import (
 )
 
 func main() {
-	var str string
-	for _, v := range os.Args[1:] {
-		str = str + v
-	}
-	aRune := []rune(str)
-
-	l := len(aRune)
+	args := os.Args[1:]
+	l := len(os.Args[1:])
 	for j := 0; j < l; j++ {
-		for i := range str {
+		for i := range args {
 			if i+1 < l {
-				if aRune[i] > aRune[i+1] {
-					aRune[i], aRune[i+1] = aRune[i+1], aRune[i]
+				if args[i] > args[i+1] {
+					args[i], args[i+1] = args[i+1], args[i]
 				}
 			}
 		}
 	}
 
-	for _, v := range aRune {
-		z01.PrintRune(v)
+	for _, v := range os.Args[1:] {
+		for _, a := range v {
+			z01.PrintRune(a)
+		}
+
 		z01.PrintRune('\n')
 	}
 }
