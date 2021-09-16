@@ -1,9 +1,10 @@
 package main
 
-import "piscine"
+import (
+	"fmt"
+	"piscine"
+)
 
 func main() {
-	piscine.PrintNbrInOrder(321)
-	piscine.PrintNbrInOrder(0)
-	piscine.PrintNbrInOrder(34521)
+	fmt.Printf("%#v\n", piscine.SplitWhiteSpaces(")oDj(27dr|<]D o\":Gn< y:NQiK `XzZ5Y9Lz=|x| v;rNn!ptRl4kJ =&jfSMT MJsRC 6U!z?\\+h(7]<Z |)S.sm%c- \"K.  x<vM3{T8htc6"))
 }
