@@ -16,9 +16,9 @@ func IsSorted(f func(a, b int) int, a []int) bool {
 		if i < l-1 {
 			if f(a[i], a[i+1]) == 0 {
 				continue
-			} else if f(a[i], a[i+1]) == 1 {
+			} else if f(a[i], a[i+1]) > 0 {
 				return false
-			} else if f(a[i], a[i+1]) == -1 {
+			} else if f(a[i], a[i+1]) < 0 {
 				continue
 			}
 		}
