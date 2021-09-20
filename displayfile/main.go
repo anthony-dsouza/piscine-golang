@@ -32,7 +32,7 @@ func main() {
 
 	name.Read(str)
 
-	fmt.Println(string(str))
+	fmt.Print(string(str))
 
 	name.Close()
 }
