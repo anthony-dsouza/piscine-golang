@@ -33,8 +33,8 @@ func isEven(nbr int) bool {
 
 func main() {
 	lengthOfArg := len(os.Args[1:])
-	EvenMsg := "I have an number even of arguements"
-	OddMsg := "I have an odd number of arguements"
+	EvenMsg := "I have an number even of arguments"
+	OddMsg := "I have an odd number of arguments"
 	if isEven(lengthOfArg) {
 		printStr(EvenMsg)
 	} else {
