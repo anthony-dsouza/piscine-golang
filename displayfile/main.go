@@ -1,39 +1,29 @@
 package main
 
 import (
-	"log"
+	"fmt"
 	"os"
-
-	"github.com/01-edu/z01"
 )
 
 func main() {
 	if len(os.Args) > 2 {
-		str := "Too many arguments"
-		for _, v := range str {
-			z01.PrintRune(v)
-		}
-		z01.PrintRune('\n')
+		fmt.Print("Too many arguments")
 		return
 	}
 	if len(os.Args) < 2 {
-		str := "File name missing"
-		for _, v := range str {
-			z01.PrintRune(v)
-		}
-		z01.PrintRune('\n')
+		fmt.Print("File name missing")
 		return
 	}
 	file := os.Args[1]
 
 	name, err := os.Open(file)
 	if err != nil {
-		log.Fatal(err)
+		fmt.Print(err.Error())
 	}
 
 	stat, err := name.Stat()
 	if err != nil {
-		log.Fatal(err)
+		fmt.Print(err.Error())
 	}
 
 	fsize := stat.Size()
@@ -42,9 +32,7 @@ func main() {
 
 	name.Read(str)
 
-	for _, v := range str {
-		z01.PrintRune(rune(v))
-	}
+	fmt.Print()
 
 	name.Close()
 }
