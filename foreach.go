@@ -1,0 +1,19 @@
+package piscine
+
+import "github.com/01-edu/z01"
+
+func PrintNbr(nbr int) {
+	aRune := rune(nbr + 48)
+	z01.PrintRune(aRune)
+}
+
+func Println() {
+	z01.PrintRune('\n')
+}
+
+func ForEach(f func(int), a []int) {
+	for _, v := range a {
+		f(v)
+	}
+	Println()
+}
