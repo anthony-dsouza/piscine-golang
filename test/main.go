@@ -1,10 +1,8 @@
 package main
 
-import (
-	"fmt"
-	"piscine"
-)
+import "piscine"
 
 func main() {
-	fmt.Printf("%#v\n", piscine.SplitWhiteSpaces(")oDj(27dr|<]D o\":Gn< y:NQiK `XzZ5Y9Lz=|x| v;rNn!ptRl4kJ =&jfSMT MJsRC 6U!z?\\+h(7]<Z |)S.sm%c- \"K.  x<vM3{T8htc6"))
+	a := []int{1, 2, 3, 4, 5, 6}
+	piscine.ForEach(piscine.PrintNbr, a)
 }
