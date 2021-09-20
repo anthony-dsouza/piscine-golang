@@ -7,11 +7,11 @@ import (
 
 func main() {
 	if len(os.Args) > 2 {
-		fmt.Print("Too many arguments")
+		fmt.Println("Too many arguments")
 		return
 	}
 	if len(os.Args) < 2 {
-		fmt.Print("File name missing")
+		fmt.Println("File name missing")
 		return
 	}
 	file := os.Args[1]
@@ -32,7 +32,7 @@ func main() {
 
 	name.Read(str)
 
-	fmt.Print()
+	fmt.Println(string(str))
 
 	name.Close()
 }
