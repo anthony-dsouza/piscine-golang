@@ -17,14 +17,13 @@ func IsSorted(f func(a, b int) int, a []int) bool {
 			if f(a[i], a[i+1]) == 0 {
 				continue
 			} else if f(a[i], a[i+1]) > 0 {
-				if a[i]-a[i+1] < 0 {
+				if f(a[i+1], a[i+2]) < 0 {
 					return false
-				} else {
-					continue
 				}
+				continue
 			} else if f(a[i], a[i+1]) < 0 {
-				if a[i]-a[i+1] > 0 {
-					continue
+				if f(a[i+1], a[i+2]) < 0 {
+					return true
 				} else {
 					return false
 				}
