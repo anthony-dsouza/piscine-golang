@@ -40,6 +40,11 @@ func main() {
 			z01.PrintRune(v)
 		}
 		z01.PrintRune('\n')
+		exit := "exit status 1"
+		for _, v := range exit {
+			z01.PrintRune(v)
+		}
+		return
 	}
 
 	stat1, _ := file1.Stat()
@@ -62,6 +67,7 @@ func main() {
 				z01.PrintRune(v)
 			}
 			z01.PrintRune('\n')
+			return
 		}
 
 		stat2, _ := file2.Stat()
