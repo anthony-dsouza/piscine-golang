@@ -1,6 +1,7 @@
 package main
 
 import (
+	"io"
 	"os"
 
 	"github.com/01-edu/z01"
@@ -8,13 +9,9 @@ import (
 
 func main() {
 	if len(os.Args) < 2 {
-		file := os.Stdout
-		stat, _ := file.Stat()
-		size := stat.Size()
-		arr := make([]byte, size)
-		file.Read(arr)
+		file, _ := io.ReadAll(os.Stdin)
 
-		for _, v := range arr {
+		for _, v := range file {
 			z01.PrintRune(rune(v))
 		}
 	} else {
