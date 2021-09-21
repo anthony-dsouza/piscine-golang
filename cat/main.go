@@ -21,7 +21,7 @@ func main() {
 		for i := range os.Args[1:] {
 			file, err := os.Open(os.Args[i+1])
 			if err != nil {
-				s := "Error: " + err.Error()
+				s := "ERROR: " + err.Error()
 				for _, v := range s {
 					z01.PrintRune(v)
 				}
