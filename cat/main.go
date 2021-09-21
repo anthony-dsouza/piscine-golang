@@ -40,7 +40,6 @@ func main() {
 			z01.PrintRune(v)
 		}
 		z01.PrintRune('\n')
-		return
 	}
 
 	stat1, _ := file1.Stat()
@@ -63,7 +62,6 @@ func main() {
 				z01.PrintRune(v)
 			}
 			z01.PrintRune('\n')
-			return
 		}
 
 		stat2, _ := file2.Stat()
