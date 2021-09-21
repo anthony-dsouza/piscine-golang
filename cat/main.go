@@ -34,7 +34,7 @@ func main() {
 
 	file1, err := os.Open(os.Args[1])
 	if err != nil {
-		s1 := "ERROR: " + err.Error()[5:]
+		s1 := "ERROR: " + err.Error()
 
 		for _, v := range s1 {
 			z01.PrintRune(v)
@@ -57,7 +57,7 @@ func main() {
 	if len(args) == 3 {
 		file2, err := os.Open(os.Args[2])
 		if err != nil {
-			s2 := "ERROR: " + err.Error()[5:]
+			s2 := "ERROR: " + err.Error()
 
 			for _, v := range s2 {
 				z01.PrintRune(v)
