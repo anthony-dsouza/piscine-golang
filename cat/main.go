@@ -26,7 +26,7 @@ func main() {
 					z01.PrintRune(v)
 				}
 				z01.PrintRune('\n')
-				return
+				os.Exit(1)
 			}
 			stat, _ := file.Stat()
 			size := stat.Size()
