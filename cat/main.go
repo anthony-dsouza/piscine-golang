@@ -25,6 +25,7 @@ func main() {
 				for _, v := range s {
 					z01.PrintRune(v)
 				}
+				z01.PrintRune('\n')
 				return
 			}
 			stat, _ := file.Stat()
