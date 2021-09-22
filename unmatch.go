@@ -10,7 +10,7 @@ func Unmatch(a []int) int {
 				count++
 			}
 		}
-		if count != 2 {
+		if count%2 != 0 {
 			num = v
 			return num
 		}
