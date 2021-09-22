@@ -16,6 +16,7 @@ func MaxWordCountN(text string, n int) map[string]int {
 				words[str]++
 			} else if i == l {
 				str = str + string(v)
+				words[str]++
 			} else {
 				_, ok := words[str]
 				if ok {
