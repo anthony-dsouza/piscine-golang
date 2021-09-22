@@ -14,6 +14,7 @@ func Unmatch(a []int) int {
 			num = v
 			return num
 		}
+		count = 0
 	}
 	return -1
 }
