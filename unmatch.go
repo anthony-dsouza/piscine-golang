@@ -12,7 +12,8 @@ func Unmatch(a []int) int {
 		}
 		if count != 2 {
 			num = v
+			return num
 		}
 	}
-	return num
+	return -1
 }
