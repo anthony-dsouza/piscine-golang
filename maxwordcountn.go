@@ -11,7 +11,7 @@ func MaxWordCountN(text string, n int) map[string]int {
 	var str string
 	l := len(text) - 1
 	for i, v := range text {
-		if v == ' ' ||  i == l {
+		if v == ' ' || i == l {
 			if i == l {
 				str = str + string(v)
 			}
