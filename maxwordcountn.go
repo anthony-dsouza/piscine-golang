@@ -34,10 +34,9 @@ func MaxWordCountN(text string, n int) map[string]int {
 
 	twords := make(map[string]int)
 
-	for i:= len(words) - 1; i >= len(words) - n; i-- {
+	for i := len(words) - 1; i >= len(words)-n; i-- {
 		twords[values[i]] = words[values[i]]
 	}
-
 
 	return twords
 }
