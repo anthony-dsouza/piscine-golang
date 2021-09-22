@@ -1,5 +1,9 @@
 package piscine
 
+import (
+	"sort"
+)
+
 func MaxWordCountN(text string, n int) map[string]int {
 	words := make(map[string]int)
 
@@ -19,10 +23,21 @@ func MaxWordCountN(text string, n int) map[string]int {
 		}
 	}
 
-	var values []int
+	values := make([]string, 0, len(words))
 	for k := range words {
-		values = append(values, words[k])
+		values = append(values, k)
 	}
 
-	return words
+	sort.Slice(values, func(i, j int) bool {
+		return words[values[i]] < words[values[j]]
+	})
+
+	twords := make(map[string]int)
+
+	for i:= len(words) - 1; i >= len(words) - 3; i-- {
+		twords[values[i]] = words[values[i]]
+	}
+
+
+	return twords
 }
