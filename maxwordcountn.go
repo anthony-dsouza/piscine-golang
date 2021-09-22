@@ -41,7 +41,5 @@ func MaxWordCountN(text string, n int) map[string]int {
 		twords[values[i]] = words[values[i]]
 	}
 
-
-
 	return twords
 }
