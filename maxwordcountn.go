@@ -1,6 +1,7 @@
 package piscine
 
 import (
+	"fmt"
 	"sort"
 )
 
@@ -16,15 +17,22 @@ func MaxWordCountN(text string, n int) map[string]int {
 				words[str]++
 			} else if i == l {
 				str = str + string(v)
-				words[str]++
-			} else {
 				_, ok := words[str]
 				if ok {
 					words[str]++
 				} else {
 					words[str] = 1
 				}
-				str = ""
+			} else {
+				_, ok := words[str]
+				if ok {
+					words[str]++
+					str = ""
+				} else {
+					words[str] = 1
+					str = ""
+				}
+
 			}
 		} else {
 			str = str + string(v)
@@ -45,6 +53,10 @@ func MaxWordCountN(text string, n int) map[string]int {
 	for i := len(words) - 1; i >= len(words)-n; i-- {
 		twords[values[i]] = words[values[i]]
 	}
+
+	fmt.Print(words)
+	fmt.Print(values)
+	fmt.Print(twords)
 
 	return twords
 }
