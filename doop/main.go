@@ -32,18 +32,24 @@ func main() {
 			d := strconv.Itoa(c)
 			e := []byte(d)
 			os.Stdout.Write(e)
+			f := []byte("\n")
+			os.Stdout.Write(f)
 		}
 		if v == '-' {
 			c := a - b
 			d := strconv.Itoa(c)
 			e := []byte(d)
 			os.Stdout.Write(e)
+			f := []byte("\n")
+			os.Stdout.Write(f)
 		}
 		if v == '*' {
 			c := a * b
 			d := strconv.Itoa(c)
 			e := []byte(d)
 			os.Stdout.Write(e)
+			f := []byte("\n")
+			os.Stdout.Write(f)
 		}
 		if v == '/' {
 			if os.Args[3] == "0" {
@@ -56,6 +62,8 @@ func main() {
 			d := strconv.Itoa(c)
 			e := []byte(d)
 			os.Stdout.Write(e)
+			f := []byte("\n")
+			os.Stdout.Write(f)
 		}
 		if v == '%' {
 			if os.Args[3] == "0" {
@@ -68,6 +76,8 @@ func main() {
 			d := strconv.Itoa(c)
 			e := []byte(d)
 			os.Stdout.Write(e)
+			f := []byte("\n")
+			os.Stdout.Write(f)
 		}
 
 	}
