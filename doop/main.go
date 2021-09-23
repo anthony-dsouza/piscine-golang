@@ -72,7 +72,7 @@ func main() {
 				os.Stdout.Write(e)
 				return
 			}
-			c := a / b
+			c := a % b
 			d := strconv.Itoa(c)
 			e := []byte(d)
 			os.Stdout.Write(e)
