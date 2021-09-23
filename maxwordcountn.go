@@ -45,7 +45,13 @@ func MaxWordCountN(text string, n int) map[string]int {
 	}
 
 	sort.Slice(values, func(i, j int) bool {
-		return words[values[i]] < words[values[j]]
+		if words[values[i]] > words[values[j]] {
+			return true
+		}
+		if words[values[i]] < words[values[j]] {
+			return false
+		}
+		return values[i] < values[j]
 	})
 
 	twords := make(map[string]int)
