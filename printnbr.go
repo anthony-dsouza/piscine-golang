@@ -7,7 +7,9 @@ func PrintNbr(n int) {
 	neg := false
 
 	if n < 0 {
-
+		if n == -9223372036854775808 {
+			n = -9223372036854775807
+		}
 		n = n * -1
 		neg = true
 	}
