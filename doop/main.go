@@ -56,6 +56,8 @@ func main() {
 				d := "No division by 0"
 				e := []byte(d)
 				os.Stdout.Write(e)
+				f := []byte("\n")
+				os.Stdout.Write(f)
 				return
 			}
 			c := a / b
@@ -70,6 +72,8 @@ func main() {
 				d := "No modulo by 0"
 				e := []byte(d)
 				os.Stdout.Write(e)
+				f := []byte("\n")
+				os.Stdout.Write(f)
 				return
 			}
 			c := a % b
